@@ -1,26 +1,19 @@
 {
-  "build": {
-    "beforeBuildCommand": "npm run build",
-    "beforeDevCommand": "npm run dev",
-    "devPath": "http://localhost:3000",
-    "distDir": "../out"
-  },
   "package": {
-    "productName": "sca",
+    "productName": "StarCitizen:Assistant",
     "version": "0.1.0"
   },
+  "build": {
+    "distDir": "../dist",
+    "devPath": "http://localhost:4200",
+    "beforeDevCommand": "npm run web:serve",
+    "beforeBuildCommand": "npm run web:prod"
+  },
   "tauri": {
-    "allowlist": {
-      "all": false
-    },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
+      "targets": "all",
+      "identifier": "dev.a7exschin.sca",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -28,38 +21,49 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "dev.a7exschin.sca",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
       "resources": [],
+      "externalBin": [],
+      "copyright": "",
+      "category": "DeveloperTool",
       "shortDescription": "",
-      "targets": "all",
+      "longDescription": "",
+      "deb": {
+        "depends": []
+      },
+      "macOS": {
+        "frameworks": [],
+        "minimumSystemVersion": "",
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "providerShortName": null,
+        "entitlements": null
+      },
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
         "timestampUrl": ""
       }
     },
-    "security": {
-      "csp": null
-    },
     "updater": {
       "active": false
     },
+    "allowlist": {
+      "all": true
+    },
     "windows": [
       {
-        "fullscreen": false,
+        "title": "StarCitizen:Assistant",
+        "width": 800,
         "height": 600,
         "resizable": true,
-        "title": "Star Citizen Assistant",
-        "width": 800
+        "fullscreen": false
       }
-    ]
+    ],
+    "security": {
+      "csp": null
+    },
+    "pattern": {
+      "use": "brownfield"
+    }
   }
 }
