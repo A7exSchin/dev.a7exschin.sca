@@ -1,7 +1,7 @@
 {
   "root": true,
   "ignorePatterns": [
-    "src-tauri/**/*", // ignore nodeJs files
+    "src-tauri/**/*",
     "dist/**/*",
     "release/**/*"
   ],
@@ -25,7 +25,7 @@
       ],
       "rules": {
         "prefer-arrow/prefer-arrow-functions": 0,
-        "@angular-eslint/directive-selector":  0,
+        "@angular-eslint/directive-selector": 0,
         "@angular-eslint/component-selector": [
           "error",
           {
@@ -34,7 +34,6 @@
             "style": "kebab-case"
           }
         ],
-        // in order to ignore __TAURI__
         "no-underscore-dangle": 0,
         "@typescript-eslint/naming-convention": 0
       }
@@ -46,8 +45,7 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {
-      }
+      "rules": {}
     }
   ]
 }
