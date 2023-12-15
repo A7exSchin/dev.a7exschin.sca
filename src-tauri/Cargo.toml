@@ -1,12 +1,12 @@
 [package]
-name = "StarCitizen:Assistant"
+name = "StarCitizen-Assistant"
 version = "0.1.0"
 description = "An Assistant App for Star Citizen"
 authors = ["A7exSchin"]
 license = ""
 repository = ""
-default-run = "SCA"
-edition = "2023"
+default-run = "StarCitizen-Assistant"
+edition = "2021"
 rust-version = "1.74.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

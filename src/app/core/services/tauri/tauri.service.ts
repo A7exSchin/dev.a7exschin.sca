@@ -17,4 +17,9 @@ export class TauriService {
     const text = await invoke('hello_world_command');
     console.log(text);
   }
+
+  async executeStarCitizen() {
+    const text = await invoke('execute_star_citizen');
+    console.log(text);
+  }
 }

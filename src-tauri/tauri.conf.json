@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "StarCitizen:Assistant",
+    "productName": "StarCitizen-Assistant",
     "version": "0.1.0"
   },
   "build": {
