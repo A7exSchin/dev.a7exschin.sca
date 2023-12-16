@@ -22,4 +22,9 @@ export class TauriService {
     const text = await invoke('execute_star_citizen');
     console.log(text);
   }
+
+  async setSCPath() {
+    const text = await invoke('set_sc_path');
+    console.log(text);
+  }
 }

@@ -6,6 +6,10 @@
 use std::path::Path;
 use std::process::Command;
 use std::io;
+use tauri::api::dialog::FileDialogBuilder;
+use prefstore::*;
+
+const APPLICATION_NAME : &str = "StarCitizen-Assistant";
 
 #[tauri::command]
 async fn hello_world_command(_app: tauri::AppHandle) -> Result<String, String> {
@@ -36,12 +40,28 @@ fn delete_directory(path: &Path) -> io::Result<()> {
     std::fs::remove_dir_all(path)
 }
 
+#[tauri::command]
+fn set_sc_path() {
+    FileDialogBuilder::new().pick_folder(|chosen_folder| {
+        //TODO: save SC path to preferences
+        if Option::is_some(&chosen_folder) {
+            savepreference(APPLICATION_NAME, "sc_folder", chosen_folder.expect("User e").to_str().expect(""));
+        } else {
+            // Do nothing for now, because users can abort the dialog.
+        }
+        
+    });
+
+
+}
+
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             execute_star_citizen,
             delete_shader_cache,
-            hello_world_command
+            hello_world_command,
+            set_sc_path
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

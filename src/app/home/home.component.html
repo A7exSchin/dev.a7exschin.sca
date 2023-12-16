@@ -2,6 +2,9 @@
   <h1 class="title">
     {{ 'PAGES.HOME.TITLE' | translate }}
   </h1>
-  <button mat-flat-button (click)="executeStarCitizen()">Execute!</button>
-  <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+  <div class="text-center">
+    <button class="button" mat-flat-button color="primary" (click)="executeStarCitizen()">Execute!</button>
+    <button class="button" mat-flat-button color="secondary" (click)="setSCPath()">Set RSI Folder path</button>
+  </div>
+  <!--<a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>-->
 </div>
