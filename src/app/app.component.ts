@@ -29,7 +29,6 @@ export class AppComponent {
 
     if (this.tauriService.isTauri) {
       console.log('Run in Tauri');
-      this.tauriService.callHelloWorld();
     } else {
       console.log('Run in browser');
     }

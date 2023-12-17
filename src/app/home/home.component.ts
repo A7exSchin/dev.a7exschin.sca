@@ -28,4 +28,9 @@ export class HomeComponent implements OnInit {
     this.tauriService.setSCPath();
   }
 
+  deleteShaderCache() {
+    console.log('deleteShaderCache');
+    this.tauriService.deleteShaderCache();
+  }
+
 }

@@ -13,11 +13,6 @@ export class TauriService {
     return !!(window && window.__TAURI__);
   }
 
-  async callHelloWorld() {
-    const text = await invoke('hello_world_command');
-    console.log(text);
-  }
-
   async executeStarCitizen() {
     const text = await invoke('execute_star_citizen');
     console.log(text);
@@ -25,6 +20,11 @@ export class TauriService {
 
   async setSCPath() {
     const text = await invoke('set_sc_path');
+    console.log(text);
+  }
+
+  async deleteShaderCache() {
+    const text = await invoke('delete_shader_cache');
     console.log(text);
   }
 }

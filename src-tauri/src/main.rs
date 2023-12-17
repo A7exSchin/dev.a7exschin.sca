@@ -8,25 +8,25 @@ use std::process::Command;
 use std::io;
 use tauri::api::dialog::FileDialogBuilder;
 use prefstore::*;
+use directories::BaseDirs;
+use std::os::windows::process::CommandExt;
 
 const APPLICATION_NAME : &str = "StarCitizen-Assistant";
 
 #[tauri::command]
-async fn hello_world_command(_app: tauri::AppHandle) -> Result<String, String> {
-  println!("I was invoked from JS!");
-  Ok("Hello world from Tauri!".into())
-}
-
-#[tauri::command]
 fn execute_star_citizen() {
-    let sc_path = Path::new("C:\\Windows\\System32\\notepad.exe");
-    execute_program(sc_path);
+    let string_path: String = getpreference(APPLICATION_NAME, "sc_folder", "");
+    let sc_path: &Path = &Path::new(&string_path).join("RSI Launcher").join("RSI Launcher.exe");
+    execute_program(sc_path).ok();
 }
 
 #[tauri::command]
 fn delete_shader_cache() {
-    let del_path = Path::new("C:\\Users\\aschindler\\Desktop\\Testdir");
-    delete_directory(del_path);
+    if let Some(base_dirs) = BaseDirs::new() {
+        let shader_path: &Path = &base_dirs.data_local_dir().join("Star Citizen");
+        // Win: %LOCALAPPDATA%/
+    delete_directory(shader_path).ok();
+    }
 }
 
 fn execute_program(path: &Path) -> io::Result<()> {
@@ -51,8 +51,6 @@ fn set_sc_path() {
         }
         
     });
-
-
 }
 
 fn main() {
@@ -60,7 +58,6 @@ fn main() {
         .invoke_handler(tauri::generate_handler![
             execute_star_citizen,
             delete_shader_cache,
-            hello_world_command,
             set_sc_path
         ])
         .run(tauri::generate_context!())
