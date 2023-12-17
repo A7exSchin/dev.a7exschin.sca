@@ -8,7 +8,6 @@
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
 
 # Introduction
 
@@ -17,8 +16,8 @@ This App is planned as a Companion Applicatin for the Star Citizen game. Various
 Currently runs with:
 
 - Angular v17.0.7
-- Tauri 1.5.0
-- Rust 1.74.0
+- Tauri v1.5.0
+- Rust v1.74.0
 
 Big thanks to maximegris' [angular-tauri project](https://github.com/maximegris/angular-tauri).
 
