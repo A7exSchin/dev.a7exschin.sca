@@ -7,9 +7,10 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, SharedModule, HomeRoutingModule, MatButtonModule]
+  imports: [CommonModule, SharedModule, HomeRoutingModule, MatButtonModule, MatCheckboxModule]
 })
 export class HomeModule {}

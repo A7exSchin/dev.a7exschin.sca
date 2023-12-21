@@ -13,9 +13,23 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private tauriService: TauriService,
     ) { }
+  
+  autoDelete = false;
 
   ngOnInit(): void {
     console.log('HomeComponent INIT');
+    this.loadAutoDeleteSetting();
+  }
+
+  changeAutoDeleteSetting() {
+    this.tauriService.changeAutoDeleteSetting();
+    this.loadAutoDeleteSetting();
+  }
+
+  loadAutoDeleteSetting() {
+    this.tauriService.getAutoDeleteSetting().then(bool => {
+      this.autoDelete = bool;
+    });
   }
 
   executeStarCitizen() {

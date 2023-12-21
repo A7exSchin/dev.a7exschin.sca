@@ -7,6 +7,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
+  let autoDelete: boolean;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({

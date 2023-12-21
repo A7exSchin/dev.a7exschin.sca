@@ -27,4 +27,14 @@ export class TauriService {
     const text = await invoke('delete_shader_cache');
     console.log(text);
   }
+
+  async getAutoDeleteSetting(): Promise<boolean> {
+    const boolean : boolean = await invoke('get_auto_delete_setting');
+    return boolean;
+  }
+
+  async changeAutoDeleteSetting() {
+    const text = await invoke('change_auto_delete_setting');
+    console.log(text);
+  }
 }
