@@ -3,10 +3,9 @@
     {{ 'PAGES.HOME.TITLE' | translate }}
   </h1>
   <div class="text-center">
-    <button class="button" mat-flat-button color="primary" (click)="executeStarCitizen()">Execute!</button>
-    <button class="button" mat-flat-button color="alert" (click)="deleteShaderCache()">Delete Shader Cache</button><br>
-    <button class="button" mat-flat-button color="secondary" (click)="setSCPath()">Set RSI Folder path</button><br>
-    <mat-checkbox [(ngModel)]="autoDelete" (change)="changeAutoDeleteSetting()">Auto Delete Shader</mat-checkbox>
+    <button class="button" mat-flat-button color="primary" (click)="executeStarCitizen()">{{ 'PAGES.HOME.EXECUTE' | translate }}</button>
+    <button class="button" mat-flat-button color="alert" (click)="deleteShaderCache()">{{ 'PAGES.HOME.DELETE_SHADER' | translate }}</button><br>
+    <button class="button" mat-flat-button color="secondary" (click)="setSCPath()">{{ 'PAGES.HOME.SET_RSI_PATH' | translate }}</button>
   </div>
-  <!--<a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>-->
+  
 </div>

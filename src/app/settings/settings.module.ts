@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HomeRoutingModule } from './home-routing.module';
+import { SettingsRoutingModule } from './settings-routing.module';
 
-import { HomeComponent } from './home.component';
+import { SettingsComponent } from './settings.component';
 import { SharedModule } from '../shared/shared.module';
 
-import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [SettingsComponent],
   imports: [
     CommonModule,
     SharedModule,
-    HomeRoutingModule,
-    MatButtonModule,
+    SettingsRoutingModule,
     MatCheckboxModule
   ]
 })
-export class HomeModule {}
+export class SettingsModule {}

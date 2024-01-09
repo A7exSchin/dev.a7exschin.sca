@@ -1,0 +1,19 @@
+{
+  "PAGES": {
+      "HOME": {
+          "TITLE": "Willkommen beim StarCitizen:Assistant!",
+          "GO_TO_DETAIL": "Zu den Details",
+          "EXECUTE": "Star Citizen ausführen",
+          "DELETE_SHADER": "Shader Cache löschen",
+          "SET_RSI_PATH": "Pfad zum RSI Ordner setzen"
+      },
+      "CALC": {
+        "TITLE": "Details Seite !",
+        "BACK_TO_HOME": "Zurück zur Startseite"
+    },
+    "SETTINGS": {
+      "TITLE": "Einstellungen",
+      "INFO": "Das ist die Einstellungsseite"
+    }
+  }
+}

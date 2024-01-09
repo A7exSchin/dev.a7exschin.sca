@@ -45,10 +45,5 @@ export class AppComponent {
       }
     });
   }
-
-  toggleMenu() {
-    this.sidenav.open();
-    this.isCollapsed = !this.isCollapsed;
-  }
   
 }

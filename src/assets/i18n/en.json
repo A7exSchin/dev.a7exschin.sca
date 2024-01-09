@@ -2,11 +2,18 @@
   "PAGES": {
       "HOME": {
           "TITLE": "Welcome to the StarCitizen:Assistant !",
-          "GO_TO_DETAIL": "Go to Detail"
+          "GO_TO_DETAIL": "Go to Detail",
+          "EXECUTE": "Execute!",
+          "DELETE_SHADER": "Delete Shader Cache",
+          "SET_RSI_PATH": "Set RSI Folder Path"
       },
-      "DETAIL": {
+      "CALC": {
         "TITLE": "Detail page !",
         "BACK_TO_HOME": "Back to Home"
+    },
+    "SETTINGS": {
+      "TITLE": "Settings page !",
+      "INFO": "This is the settings page !"
     }
   }
 }
