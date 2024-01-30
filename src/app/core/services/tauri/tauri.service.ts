@@ -37,4 +37,9 @@ export class TauriService {
     const text = await invoke('change_auto_delete_setting');
     console.log(text);
   }
+
+  async getSCPath(): Promise<string> {
+    const sc_path : string = await invoke('get_sc_path');
+    return sc_path;
+  }
 }

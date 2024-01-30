@@ -64,6 +64,11 @@ fn get_auto_delete_setting() -> bool {
     return getpreference(APPLICATION_NAME, "auto_delete", false).trim().parse().unwrap();
 }
 
+#[tauri::command]
+fn get_sc_path() -> String {
+    return getpreference(APPLICATION_NAME, "sc_folder", "Path not set!").parse().unwrap();
+}
+
 fn main() {
     if let Some(base_dirs) = BaseDirs::new() {
         let config_path: &Path = &base_dirs.config_dir().join("StarCitizen-Assistant").join("auto_delete.txt");
@@ -78,7 +83,8 @@ fn main() {
             delete_shader_cache,
             set_sc_path,
             get_auto_delete_setting,
-            change_auto_delete_setting
+            change_auto_delete_setting,
+            get_sc_path
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

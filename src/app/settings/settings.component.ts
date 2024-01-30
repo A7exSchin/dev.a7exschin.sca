@@ -13,21 +13,31 @@ export class SettingsComponent implements OnInit {
   ) { }
 
   autoDelete = false;
+  starCitizenPath = '';
 
   ngOnInit(): void {
     console.log('SettingsComponent INIT');
-    this.loadAutoDeleteSetting();
+    this.loadSettings();
    }
 
-   loadAutoDeleteSetting() {
+   loadSettings() {
     this.tauriService.getAutoDeleteSetting().then(bool => {
       this.autoDelete = bool;
+    });
+
+    this.tauriService.getSCPath().then(path => {
+      this.starCitizenPath = path;
     });
   }
 
   changeAutoDeleteSetting() {
     this.tauriService.changeAutoDeleteSetting();
-    this.loadAutoDeleteSetting();
+    this.loadSettings();
+  }
+
+  setSCPath() {
+    console.log('setSCPath');
+    this.tauriService.setSCPath();
   }
 
 }

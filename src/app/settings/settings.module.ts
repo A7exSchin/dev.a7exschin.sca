@@ -7,6 +7,7 @@ import { SettingsComponent } from './settings.component';
 import { SharedModule } from '../shared/shared.module';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [SettingsComponent],
@@ -14,7 +15,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     CommonModule,
     SharedModule,
     SettingsRoutingModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatFormFieldModule
   ]
 })
 export class SettingsModule {}

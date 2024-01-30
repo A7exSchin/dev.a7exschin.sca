@@ -2,10 +2,18 @@
     <h1 class="title">
       Settings
     </h1>
-  
-    This is the soon to be settings page.
     <h2>General Settings</h2>
-    
+    <div class="flex">
+      <div class="col-sm">
+        <p>Star Citizen Installation Path</p>
+      </div>
+      <div class="col-sm">
+        <mat-form-field class="flex">
+          <mat-label>Star Citizen Path</mat-label>
+          <input matInput [(ngModel)]="starCitizenPath" (change)="setSCPath()" placeholder="Star Citizen Path">
+        </mat-form-field>
+      </div>
+    </div>
     <h2>Startup Settings</h2>
     <mat-checkbox [(ngModel)]="autoDelete" (change)="changeAutoDeleteSetting()">Auto Delete Shader</mat-checkbox>
     
