@@ -24,6 +24,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>  new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -53,7 +54,8 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>  new Transl
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
