@@ -8,6 +8,8 @@ import { SharedModule } from '../shared/shared.module';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [SettingsComponent],
@@ -16,7 +18,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     SharedModule,
     SettingsRoutingModule,
     MatCheckboxModule,
-    MatFormFieldModule
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class SettingsModule {}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TauriService} from '../core/services';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'settings',
