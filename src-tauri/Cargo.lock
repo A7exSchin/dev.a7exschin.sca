@@ -6,8 +6,10 @@ version = 3
 name = "StarCitizen-Assistant"
 version = "0.1.0"
 dependencies = [
+ "configparser",
  "directories",
  "dirs",
+ "platform-dirs",
  "prefstore",
  "serde",
  "serde_json",
@@ -481,6 +483,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "configparser"
+version = "3.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4ec6d3da8e550377a85339063af6e3735f4b1d9392108da4e083a1b3b9820288"
+
+[[package]]
 name = "convert_case"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -702,6 +710,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "44c45a9d03d6676652bcb5e724c7e988de1acad23a711b5217ab9cbecbec2225"
 dependencies = [
  "dirs-sys",
+]
+
+[[package]]
+name = "dirs-next"
+version = "1.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cf36e65a80337bea855cd4ef9b8401ffce06a7baedf2e85ec467b1ac3f6e82b6"
+dependencies = [
+ "cfg-if",
+ "dirs-sys-next",
 ]
 
 [[package]]
@@ -1810,7 +1828,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3e72d50edb17756489e79d52eb146927bec8eba9dd48faadf9ef08bca3791ad5"
 dependencies = [
  "cc",
- "dirs-next",
+ "dirs-next 2.0.0",
  "objc-foundation",
  "objc_id",
  "time",
@@ -2461,6 +2479,15 @@ name = "pkg-config"
 version = "0.3.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6ac9a59f73473f1b8d852421e59e64809f025994837ef743615c6d0c5b305160"
+
+[[package]]
+name = "platform-dirs"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e188d043c1a692985f78b5464853a263f1a27e5bd6322bad3a4078ee3c998a38"
+dependencies = [
+ "dirs-next 1.0.2",
+]
 
 [[package]]
 name = "plist"
@@ -3443,7 +3470,7 @@ dependencies = [
  "anyhow",
  "bytes",
  "cocoa",
- "dirs-next",
+ "dirs-next 2.0.0",
  "embed_plist",
  "encoding_rs",
  "flate2",
@@ -3497,7 +3524,7 @@ checksum = "defbfc551bd38ab997e5f8e458f87396d2559d05ce32095076ad6c30f7fc5f9c"
 dependencies = [
  "anyhow",
  "cargo_toml",
- "dirs-next",
+ "dirs-next 2.0.0",
  "heck 0.4.1",
  "json-patch",
  "semver 1.0.16",

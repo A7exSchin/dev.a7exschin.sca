@@ -10,6 +10,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [SettingsComponent],
@@ -20,7 +22,9 @@ import { MatInputModule } from '@angular/material/input';
     MatCheckboxModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSlideToggleModule,
+    BrowserAnimationsModule
   ]
 })
 export class SettingsModule {}

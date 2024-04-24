@@ -45,7 +45,12 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <div class="right-tile">
-          <mat-checkbox [(ngModel)]="autoDelete" (click)="changeAutoDeleteSetting()"></mat-checkbox>
+          <mat-slide-toggle 
+            [(ngModel)]="autoStart"
+            (change)="changeAutoStartSetting()"
+            >
+          </mat-slide-toggle>
+          
         </div>
       </mat-grid-tile>
     </mat-grid-list>

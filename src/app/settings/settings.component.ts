@@ -14,6 +14,7 @@ export class SettingsComponent implements OnInit {
   ) { }
 
   autoDelete = false;
+  autoStart = false;
   starCitizenPath = '';
 
   ngOnInit(): void {
@@ -34,6 +35,9 @@ export class SettingsComponent implements OnInit {
   changeAutoDeleteSetting() {
     this.tauriService.changeAutoDeleteSetting();
     this.loadSettings();
+  }
+
+  changeAutoStartSetting() {
   }
 
   setSCPath() {
